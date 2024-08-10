@@ -1,0 +1,64 @@
+.view-appointments {
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.appointments-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.appointments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.appointment-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.appointment-action {
+  display: flex;
+  align-items: center;
+}
+
+.appointment-action label {
+  font-size: 14px;
+  color: #555;
+}
+
+.appointment-action button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.appointment-action button:hover {
+  background-color: #ff5a4c;
+}

@@ -1,0 +1,75 @@
+/* HeroSection Styles */
+/* Reset margin and padding for body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  background-image: url('../../images/background.png'); /* Update the path as per your image location */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.hero-content {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.hero-content h2 {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: 'Georgia', serif;
+  font-size: 64px;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.book-now-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #161615;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.book-now-button:hover {
+  background-color: #a29d98;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.5); /* Optional overlay for better text visibility */
+  z-index: 0; /* Ensure overlay is below the content */
+}

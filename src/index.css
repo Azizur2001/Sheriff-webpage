@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+#home {
+  background-color: #282c34;
+}
+
+#about {
+  background-color: #111;
+}
+
+#services {
+  background-color: #111; 
+}
+
+#gallery {
+  background-color: #4BBFC3;
+}
+
+#testimonials {
+  background-color: #111;
+}
+
+#contact {
+  background-color: #f90;
+}
+
+
+

@@ -1,0 +1,74 @@
+/* AdminLogin.css */
+
+/* Reset margin and padding for body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111; /* Match the background color with homepage theme */
+}
+
+.admin-login h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #ffffff; /* Change to white for contrast */
+  font-weight: bold;
+}
+
+.admin-login form {
+  background-color: #333; /* Dark background to match the homepage theme */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.admin-login input {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 25px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login button {
+  width: 50%;
+  padding: 15px;
+  background-color: #0a0a0a; /* Match button color with homepage theme */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto 0 auto; /* Center the button */
+
+}
+
+.admin-login button:hover {
+  background-color: #a29d98; /* Slightly darker gold on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}

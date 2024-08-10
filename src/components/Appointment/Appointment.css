@@ -1,0 +1,103 @@
+/* Appointment.css */
+
+/* Reset margin and padding for body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.appointment-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../../images/background.png') no-repeat center center/cover; /* Add your image path here */
+  position: relative;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.appointment-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  z-index: 1;
+}
+
+.appointment-form-container .message,
+.appointment-form-container form {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.appointment-form-container h1 {
+  padding: 50px;
+  color: #ffffff; /* Ensure text color is white */
+  font-size: 2rem; /* Adjust the font size if needed */
+  z-index: 3; /* Ensure it is above the background overlay */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+.appointment-form-container form {
+  background: #1a1a1a; /* Match the home page theme */
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the contents of the form */
+}
+
+.appointment-form-container label {
+  font-size: 14px;
+  color: #fff; /* Change text color to white for contrast */
+  margin-bottom: 8px;
+  display: block;
+  width: 100%; /* Ensure labels span the width of the form */
+}
+
+.appointment-form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s ease;
+  background-color: #333; /* Match the home page theme */
+  color: #fff; /* Change text color to white for contrast */
+}
+
+.appointment-form-container input:focus {
+  border-color: #007bff;
+}
+
+.appointment-form-container button {
+  width: 50%;
+  padding: 15px;
+  background-color: #0a0a0a; /* Match button color with homepage theme */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto 0 auto; /* Center the button */
+}
+
+.appointment-form-container button:hover {
+  background-color: #a29d98; /* Slightly darker gold on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
