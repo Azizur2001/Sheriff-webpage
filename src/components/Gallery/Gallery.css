@@ -1,26 +1,9 @@
-/* Grid styles */
+/* Grid styles from previous setup */
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 15px;
   padding: 20px;
-  opacity: 0;
-  transform: translateX(-30px); /* Initial position off-screen */
-}
-
-.fade-in {
-  animation: fadeInLeft 0.8s ease-out forwards;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px); /* Start off-screen */
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0); /* End at original position */
-  }
 }
 
 .grid-item {
@@ -106,4 +89,11 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.caption {
+  margin: 15px 0;
+  color: white;
+  font-size: 18px;
+  text-align: center;
 }
