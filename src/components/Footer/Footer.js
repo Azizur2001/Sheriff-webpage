@@ -1,23 +1,3 @@
-// import React from 'react';
-// import styled from 'styled-components';
-
-// const Footer = () => {
-//   return (
-//     <FooterContainer>
-//       <p>&copy; 2024 BarberShop. All rights reserved.</p>
-//     </FooterContainer>
-//   );
-// };
-
-// // const FooterContainer = styled.footer`
-// //   padding: 20px;
-// //   background-color: #333;
-// //   color: white;
-// //   text-align: center;
-// // `;
-
-// export default Footer;
-
 import React from 'react';
 import './Footer.css';
 

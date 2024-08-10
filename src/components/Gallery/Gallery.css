@@ -100,6 +100,23 @@
 
 /* Media Queries for Responsiveness */
 
+/* Desktops */
+@media (min-width: 1025px) {
+  .grid-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
 /* Tablets */
 @media (max-width: 1024px) {
   .grid-gallery {
