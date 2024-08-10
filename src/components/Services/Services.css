@@ -13,7 +13,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 20px;
   color: #ffffff; /* Use your current color scheme */
   background: url('../../images/services.png') no-repeat center center/cover; /* Add your image path here */
   position: relative;

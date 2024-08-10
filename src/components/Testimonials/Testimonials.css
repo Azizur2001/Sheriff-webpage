@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
+  height: 470px;
   max-width: 1550px; /* Ensuring the grid has a maximum width */
   width: 100%; /* Making sure it uses the full width */
 }
@@ -76,10 +77,11 @@
 .submit-review-button {
   padding: 10px 20px;
   font-size: 1rem;
+  padding: 10px;
   background-color: #3498db;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
