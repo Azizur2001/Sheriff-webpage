@@ -9,7 +9,6 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-
 .admin-login {
   display: flex;
   flex-direction: column;
@@ -58,7 +57,6 @@ html, body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto 0 auto; /* Center the button */
-
 }
 
 .admin-login button:hover {
@@ -71,4 +69,73 @@ html, body {
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .admin-login h1 {
+    font-size: 28px;
+  }
+
+  .admin-login form {
+    padding: 30px;
+  }
+
+  .admin-login input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .admin-login button {
+    width: 60%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .admin-login h1 {
+    font-size: 24px;
+  }
+
+  .admin-login form {
+    padding: 25px;
+  }
+
+  .admin-login input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .admin-login button {
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .admin-login h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .admin-login form {
+    padding: 20px;
+  }
+
+  .admin-login input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .admin-login button {
+    width: 80%;
+    padding: 10px;
+    font-size: 13px;
+  }
 }

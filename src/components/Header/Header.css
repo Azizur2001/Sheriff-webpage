@@ -7,7 +7,6 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -21,6 +20,7 @@ html, body {
 
 .logo h1 {
   margin: 0;
+  font-size: 1.5rem; /* Default logo font size */
 }
 
 nav ul {
@@ -62,4 +62,89 @@ nav ul li a:hover {
 .auth-buttons .btn:hover {
   background-color: #b08d30;
   transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 15px;
+    height: 50px; /* Adjust height for tablets */
+  }
+
+  .logo h1 {
+    font-size: 1.3rem; /* Slightly smaller logo for tablets */
+  }
+
+  nav ul li {
+    margin-right: 15px;
+  }
+
+  .auth-buttons .btn {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem; /* Smaller logo for mobile devices */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .auth-buttons {
+    margin-right: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .auth-buttons .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .header {
+    padding: 8px;
+  }
+
+  .logo h1 {
+    font-size: 1rem; /* Smaller logo for small mobile devices */
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .auth-buttons .btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }

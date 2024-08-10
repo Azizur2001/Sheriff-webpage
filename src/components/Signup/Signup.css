@@ -8,7 +8,6 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-
 .signup {
   display: flex;
   flex-direction: column;
@@ -85,4 +84,86 @@ html, body {
 
 .signup .google-signup:hover {
   background-color: #a29d98;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .signup h1 {
+    font-size: 28px;
+  }
+
+  .signup form {
+    padding: 30px;
+  }
+
+  .signup form input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .signup form button {
+    width: 60%;
+    padding: 12px;
+  }
+
+  .signup .google-signup {
+    font-size: 13px;
+    height: 35px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .signup h1 {
+    font-size: 24px;
+  }
+
+  .signup form {
+    padding: 25px;
+  }
+
+  .signup form input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .signup form button {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .signup .google-signup {
+    font-size: 12px;
+    height: 30px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .signup h1 {
+    font-size: 20px;
+  }
+
+  .signup form {
+    padding: 20px;
+    max-width: 300px;
+  }
+
+  .signup form input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .signup form button {
+    width: 80%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .signup .google-signup {
+    font-size: 12px;
+    height: 30px;
+  }
 }

@@ -14,7 +14,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: url('../../images/background.png') no-repeat center center/cover; /* Add your image path here */
+  background: url('../../images/background.png') no-repeat center center/cover;
   position: relative;
   padding: 20px;
   background-size: cover;
@@ -100,4 +100,78 @@ html, body {
 .appointment-form-container button:hover {
   background-color: #a29d98; /* Slightly darker gold on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .appointment-form-container h1 {
+    font-size: 1.8rem;
+    padding: 40px;
+  }
+
+  .appointment-form-container form {
+    padding: 30px;
+  }
+
+  .appointment-form-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .appointment-form-container button {
+    width: 60%;
+    padding: 12px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .appointment-form-container h1 {
+    font-size: 1.5rem;
+    padding: 30px;
+  }
+
+  .appointment-form-container form {
+    padding: 20px;
+    max-width: 320px;
+  }
+
+  .appointment-form-container input {
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .appointment-form-container button {
+    width: 70%;
+    padding: 10px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .appointment-form-container h1 {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .appointment-form-container form {
+    padding: 15px;
+    max-width: 280px;
+  }
+
+  .appointment-form-container input {
+    padding: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  .appointment-form-container button {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+  }
 }

@@ -62,3 +62,98 @@ h2 {
 .appointment-action button:hover {
   background-color: #ff5a4c;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .view-appointments {
+    padding: 30px;
+  }
+
+  .appointment-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .appointment-info p {
+    font-size: 13px;
+  }
+
+  .appointment-action {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .appointment-action button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .view-appointments {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .appointment-item {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .appointment-info p {
+    font-size: 12px;
+  }
+
+  .appointment-action {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .appointment-action button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .view-appointments {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .appointment-item {
+    padding: 8px;
+  }
+
+  .appointment-info p {
+    font-size: 11px;
+  }
+
+  .appointment-action button {
+    width: 100%;
+    padding: 6px;
+    font-size: 13px;
+  }
+}

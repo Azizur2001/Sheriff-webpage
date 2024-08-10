@@ -8,8 +8,6 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-
-
 .services-section {
   display: flex;
   flex-direction: column;
@@ -72,4 +70,78 @@ html, body {
   font-size: 1.5rem;
   flex: 0 0 100px; /* Fixed width for the price column */
   text-align: right; /* Align text to the right */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 40px;
+  }
+
+  .services-section h2 {
+    font-size: 4rem; /* Adjusted font size for tablets */
+    margin-bottom: 50px;
+  }
+
+  .service-item {
+    padding: 20px 0;
+  }
+
+  .service-name,
+  .service-price {
+    font-size: 1.3rem; /* Slightly smaller font size for tablets */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 30px;
+  }
+
+  .services-section h2 {
+    font-size: 3rem; /* Adjusted font size for mobile devices */
+    margin-bottom: 40px;
+  }
+
+  .service-item {
+    padding: 15px 0;
+    flex-direction: column; /* Stack name and price vertically */
+    align-items: flex-start;
+  }
+
+  .service-name,
+  .service-price {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%; /* Make them full width */
+  }
+
+  .service-price {
+    text-align: left; /* Align text to the left */
+    margin-top: 10px; /* Add margin for spacing */
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .services-section {
+    padding: 20px;
+  }
+
+  .services-section h2 {
+    font-size: 2.5rem; /* Adjusted font size for small mobile devices */
+    margin-bottom: 30px;
+  }
+
+  .service-item {
+    padding: 10px 0;
+  }
+
+  .service-name,
+  .service-price {
+    font-size: 1rem;
+  }
 }
