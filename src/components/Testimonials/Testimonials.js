@@ -51,7 +51,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     const fetchTestimonials = async () => {
-      const q = query(collection(db, 'testimonials'), orderBy('timestamp', 'desc'), limit(12));
+      const q = query(collection(db, 'testimonials'), orderBy('timestamp', 'desc'), limit(10));
       const querySnapshot = await getDocs(q);
       const testimonialsList = querySnapshot.docs.map(doc => doc.data());
       setTestimonials(testimonialsList);
