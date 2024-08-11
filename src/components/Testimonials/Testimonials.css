@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
-  height: 470px;
+  height: 450px;
   max-width: 1550px; /* Ensuring the grid has a maximum width */
   width: 100%; /* Making sure it uses the full width */
 }
