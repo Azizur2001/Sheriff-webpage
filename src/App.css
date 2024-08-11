@@ -5,7 +5,7 @@ html {
 
 body {
   overflow-y: auto;
-  scroll-snap-type: none; /* Ensure no scroll snap behavior */
+  scroll-behavior: smooth; /* Keep smooth scrolling */
 }
 
 .App {
@@ -18,84 +18,16 @@ body {
 .scroll-container {
   flex: 1;
   overflow-y: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: none; /* Disable scroll snapping */
+  scroll-behavior: smooth; /* Keep smooth scrolling */
+  /* Removed scroll-snap-type */
 }
 
 .section {
-  scroll-snap-align: start;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Header Styles */
-.header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 {
-  margin-left: 20px;
-}
-
-.header nav {
-  margin-right: 20px;
-}
-
-.header nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.header nav ul li {
-  margin: 0 10px;
-}
-
-.header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Footer Styles */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-
-
-
-
-
-
-/* General Styles */
-.scroll-container {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  height: 100vh;
-}
-
-.section {
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* Removed scroll-snap-align */
 }
 
 /* Header Styles */
@@ -190,4 +122,3 @@ body {
 .appointment-form button:hover {
   background-color: #c39e32;
 }
-
