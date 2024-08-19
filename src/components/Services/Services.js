@@ -15,7 +15,7 @@ const ServicesComponent = () => {
     <Box 
       component="section" 
       sx={{ 
-        minHeight: '85vh', // Ensure the section covers the full height of the viewport
+        minHeight: '90vh', // Ensure the section covers the full height of the viewport
         width: '100%', // Ensure the section covers the full width
         py: { xs: 4, md: 8 }, 
         px: { xs: 2, md: 4 }, 
