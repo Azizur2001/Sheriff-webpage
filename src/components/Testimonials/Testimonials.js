@@ -153,8 +153,8 @@ const Testimonials = () => {
         sx={{ 
           textAlign: 'center', 
           backgroundColor: 'rgba(255, 255, 255, 0.85)', 
-          padding: { xs: 3, md: 6 }, 
-          borderRadius: 2, 
+          padding: { xs: 3, md: 5 }, 
+          borderRadius: 4, 
           boxShadow: 3,
           overflowY: 'auto', // Allow scrolling within the container if content overflows
         }}
@@ -169,10 +169,10 @@ const Testimonials = () => {
         </Typography>
         <Grid container spacing={2} sx={{ mb: 2 }}>
           {testimonials.map((testimonial, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{ mb: 2 }}>  {/* Add bottom margin */}
               <Card 
                 sx={{ 
-                  height: '100%', 
+                  height: '90%', 
                   display: 'flex', 
                   flexDirection: 'column', 
                   justifyContent: 'space-between', 
