@@ -9,7 +9,6 @@ const ServicesComponent = () => {
     { name: 'Beard Shaving', price: '$15' },
     { name: 'Beard Trim', price: '$15' },
     { name: 'Cut & Shave', price: '$30' },
-    { name: 'Deep Tissue Shave', price: '$22' },
   ];
 
   return (
