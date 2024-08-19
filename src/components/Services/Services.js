@@ -36,7 +36,7 @@ const ServicesComponent = () => {
           variant="h4" 
           component="h2" 
           gutterBottom
-          sx={{ mb: { xs: 4, md: 12 }, fontWeight: 'bold', fontSize: { xs: '2rem', md: '4.5rem' } }}
+          sx={{ mb: { xs: 4, md: 6 }, fontWeight: 'bold', fontSize: { xs: '2rem', md: '4.5rem' } }}
         >
           SERVICES
         </Typography>
