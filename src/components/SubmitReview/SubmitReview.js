@@ -1,11 +1,122 @@
+// import React, { useState } from 'react';
+// import { db } from '../../firebase';
+// import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+// import { Container, TextField, Button, Typography, Box, Rating } from '@mui/material';
+
+// const SubmitReview = () => {
+//   const [rating, setRating] = useState(0);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const name = e.target.name.value;
+//     const review = e.target.review.value;
+
+//     if (rating === 0) {
+//       alert('Please select a star rating');
+//       return;
+//     }
+
+//     try {
+//       await addDoc(collection(db, 'testimonials'), {
+//         name,
+//         review,
+//         rating,
+//         timestamp: serverTimestamp(),
+//       });
+//       alert('Review submitted successfully!');
+//       e.target.reset();
+//       setRating(0);
+//     } catch (error) {
+//       console.error('Error submitting review:', error);
+//       alert('Failed to submit review. Please try again.');
+//     }
+//   };
+
+//   return (
+//     <Container 
+//       maxWidth="sm" 
+//       sx={{ 
+//         mt: 8, 
+//         display: 'flex', 
+//         flexDirection: 'column', 
+//         alignItems: 'center', 
+//         textAlign: 'center' 
+//       }}
+//     >
+//       <Typography 
+//         variant="h4" 
+//         component="h1" 
+//         gutterBottom
+//       >
+//         Submit a Review
+//       </Typography>
+//       <Box 
+//         component="form" 
+//         onSubmit={handleSubmit} 
+//         sx={{ 
+//           width: '100%', 
+//           mt: 1 
+//         }}
+//       >
+//         <TextField
+//           margin="normal"
+//           fullWidth
+//           label="Name"
+//           id="name"
+//           name="name"
+//           required
+//         />
+//         <TextField
+//           margin="normal"
+//           fullWidth
+//           label="Review"
+//           id="review"
+//           name="review"
+//           multiline
+//           rows={4}
+//           required
+//         />
+//         <Box 
+//           sx={{ 
+//             mt: 2, 
+//             mb: 2, 
+//             display: 'flex', 
+//             alignItems: 'center', 
+//             justifyContent: 'center' 
+//           }}
+//         >
+//           <Typography component="legend">Rating:</Typography>
+//           <Rating
+//             name="rating"
+//             value={rating}
+//             onChange={(event, newValue) => setRating(newValue)}
+//           />
+//         </Box>
+//         <Button
+//           type="submit"
+//           fullWidth
+//           variant="contained"
+//           color="primary"
+//           sx={{ mt: 3, mb: 2 }}
+//         >
+//           Submit
+//         </Button>
+//       </Box>
+//     </Container>
+//   );
+// };
+
+// export default SubmitReview;
+
+
 import React, { useState } from 'react';
 import { db } from '../../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import './SubmitReview.css';
+import { Container, TextField, Button, Typography, Box, Rating } from '@mui/material';
+import backgroundImage from '../../images/barbertools.png'; // Importing the background image
 
 const SubmitReview = () => {
   const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +138,6 @@ const SubmitReview = () => {
       alert('Review submitted successfully!');
       e.target.reset();
       setRating(0);
-      setHover(0);
     } catch (error) {
       console.error('Error submitting review:', error);
       alert('Failed to submit review. Please try again.');
@@ -35,39 +145,90 @@ const SubmitReview = () => {
   };
 
   return (
-    <div className="review-form-container">
-      <form className="review-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="review">Review:</label>
-          <textarea id="review" name="review" rows="4" required></textarea>
-        </div>
-        <div className="form-group rating-group">
-          <label htmlFor="rating">Rating:</label>
-          <div className="star-rating">
-            {[...Array(5)].map((star, index) => {
-              index += 1;
-              return (
-                <button
-                  type="button"
-                  key={index}
-                  className={index <= (hover || rating) ? "on" : "off"}
-                  onClick={() => setRating(index)}
-                  onMouseEnter={() => setHover(index)}
-                  onMouseLeave={() => setHover(rating)}
-                >
-                  <span className="star">&#9733;</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-        <button type="submit" className="submit-button">Submit</button>
-      </form>
-    </div>
+    <Box 
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        padding: '16px',
+      }}
+    >
+      <Container 
+        maxWidth="sm" 
+        sx={{ 
+          backgroundColor: 'rgba(255, 255, 255, 0.85)', 
+          padding: { xs: 4, md: 6 }, 
+          borderRadius: 2, 
+          boxShadow: 3,
+          textAlign: 'center',
+        }}
+      >
+        <Typography 
+          variant="h4" 
+          component="h1" 
+          gutterBottom
+        >
+          Submit a Review
+        </Typography>
+        <Box 
+          component="form" 
+          onSubmit={handleSubmit} 
+          sx={{ 
+            width: '100%', 
+            mt: 1 
+          }}
+        >
+          <TextField
+            margin="normal"
+            fullWidth
+            label="Name"
+            id="name"
+            name="name"
+            required
+          />
+          <TextField
+            margin="normal"
+            fullWidth
+            label="Review"
+            id="review"
+            name="review"
+            multiline
+            rows={4}
+            required
+          />
+          <Box 
+            sx={{ 
+              mt: 2, 
+              mb: 2, 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center' 
+            }}
+          >
+            <Typography component="legend">Rating:</Typography>
+            <Rating
+              name="rating"
+              value={rating}
+              onChange={(event, newValue) => setRating(newValue)}
+            />
+          </Box>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Submit
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 

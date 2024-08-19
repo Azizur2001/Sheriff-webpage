@@ -1,5 +1,6 @@
 import React from 'react';
-import './Services.css';
+import { Container, Typography, Grid, Box } from '@mui/material';
+import backgroundImage from '../../images/barbertools.png'; // Importing the background image
 
 const ServicesComponent = () => {
   const services = [
@@ -12,17 +13,65 @@ const ServicesComponent = () => {
   ];
 
   return (
-    <section className="services-section">
-      <h2>SERVICES</h2>
-      <div className="services-list">
-        {services.map((service, index) => (
-          <div key={index} className="service-item">
-            <span className="service-name">{service.name}</span>
-            <span className="service-price">{service.price}</span>
-          </div>
-        ))}
-      </div>
-    </section>
+    <Box 
+      component="section" 
+      sx={{ 
+        minHeight: '90vh', // Ensure the section covers the full height of the viewport
+        width: '100%', // Ensure the section covers the full width
+        py: { xs: 4, md: 8 }, 
+        px: { xs: 2, md: 4 }, 
+        backgroundImage: `url(${backgroundImage})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat',
+        textAlign: 'center',
+        color: '#fff', // Ensure text is visible against the background
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Container maxWidth="md">
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          gutterBottom
+          sx={{ mb: { xs: 4, md: 6 }, fontWeight: 'bold', fontSize: { xs: '2rem', md: '2.5rem' } }}
+        >
+          SERVICES
+        </Typography>
+        <Grid container spacing={4}>
+          {services.map((service, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Box 
+                sx={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  p: 2, 
+                  border: '1px solid', 
+                  borderColor: 'divider', 
+                  borderRadius: 2, 
+                  backgroundColor: 'rgba(255, 255, 255, 0.85)', // Semi-transparent background to ensure readability
+                  boxShadow: 3, 
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  }
+                }}
+              >
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  {service.name}
+                </Typography>
+                <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  {service.price}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
