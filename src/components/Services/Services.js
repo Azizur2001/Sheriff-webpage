@@ -37,13 +37,23 @@ const ServicesComponent = () => {
           variant="h4" 
           component="h2" 
           gutterBottom
-          sx={{ mb: { xs: 4, md: 6 }, fontWeight: 'bold', fontSize: { xs: '2rem', md: '2.5rem' } }}
+          sx={{ mb: { xs: 4, md: 12 }, fontWeight: 'bold', fontSize: { xs: '2rem', md: '4.5rem' } }}
         >
           SERVICES
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
           {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid 
+              item 
+              xs={12} 
+              sm={12} 
+              md={8} // Set to 12 columns on desktop to make it line by line
+              key={index}
+              sx={{ 
+                mb: { xs: 2, md: 2 }, // Add margin between each service item
+                width: '100%', // Ensure it takes up the full width of the container
+              }}
+            >
               <Box 
                 sx={{ 
                   display: 'flex', 

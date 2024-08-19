@@ -122,3 +122,21 @@ body {
 .appointment-form button:hover {
   background-color: #c39e32;
 }
+
+
+/* Add this to your global CSS file */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Ensure the text wraps to the next line */
+.typography-review-text {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal; /* Allow the text to wrap */
+}
