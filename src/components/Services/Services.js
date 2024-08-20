@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Grid, Box } from '@mui/material';
-import backgroundImage from '../../images/barbertools.png'; // Importing the background image
+import backgroundImage from '../../images/services.png'; // Importing the background image
 
 const ServicesComponent = () => {
   const services = [

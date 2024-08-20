@@ -3,7 +3,7 @@ import { db } from '../../firebase';
 import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
 import { Container, Grid, Card, CardContent, Typography, Box, Button } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import backgroundImage from '../../images/barbertools.png';
+import backgroundImage from '../../images/reviews.png';
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
